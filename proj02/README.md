@@ -19,3 +19,12 @@ Volem que tant l’empresa client com nosaltres ser capaços de determinar quins
 Volem estar en condicions de resoldre incidències que se generen en el servidor. 
 
 Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmyadmin.
+
+## Enllaços interessants
+###  hosting
+[comparativa hosting](https://www.comparahosting.com/p/que-es-hosting/)
+[hosting gestionat](https://www.claranet.es/hosting-gestionado)
+[managed hosting](https://www.liquidweb.com/managed-hosting/)
+###  interessant
+[consells per aventurar-se en el món de l'allotjament web](https://www.proxadmin.es/blog/empezando-un-negocio-de-hosting/#more-15)
+
