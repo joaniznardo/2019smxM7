@@ -3,12 +3,12 @@
 ## procés per etapes
 
 ## 
-NOM_VOLUM=volum-restore
-NOM_CONTAINER=container-auxiliar
-DIRECTORI_DE_CONTAINER=unnomqualsevol
-DIRECTORI_TEMPORAL=tmp
-FITXER_A_TRASSPASSAR=millor-un-tar.tgz
-FITXER_A_EMPAQUETAR=un-nom-qualsevol.txt
+export NOM_VOLUM=volum-restore
+export NOM_CONTAINER=container-auxiliar
+export NIRECTORI_DE_CONTAINER=unnomqualsevol
+export NIRECTORI_TEMPORAL=tmp
+export NITXER_A_TRASSPASSAR=millor-un-tar.tgz
+export NITXER_A_EMPAQUETAR=un-nom-qualsevol.txt
 
 # idempotent: eliminem abans de crear
 docker container rm $NOM_CONTAINER
