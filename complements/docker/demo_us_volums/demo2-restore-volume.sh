@@ -27,4 +27,4 @@ tar -czvf $FITXER_A_TRASSPASSAR $FITXER_A_EMPAQUETAR
 
 # executem directament l'ordre de descomprimir en el container en un directori concret, agafant el ".tgz" de l'entrada estàndar ( -f - ), gràcies a la redirecció a procés ( "|")
 # aquí la "màgia és que la sortida d'un procés de la màquina física (cat), s'aprofita en un procés del container (tar)
-cat $FITXER_A_TRASSPASSAR | docker container run -i --env-file ./demo2.env  --name $NOM_CONTAINER -v $NOM_VOLUM:/$DIRECTORI_DE_CONTAINER alpine:latest tar -xvzf - -C /$DIRECTORI_DE_CONTAINER
+cat $FITXER_A_TRASSPASSAR | docker container run -i --env-file ./.env  --name $NOM_CONTAINER -v $NOM_VOLUM:/$DIRECTORI_DE_CONTAINER alpine:latest tar -xvzf - -C /$DIRECTORI_DE_CONTAINER
