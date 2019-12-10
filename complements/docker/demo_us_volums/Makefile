@@ -1,14 +1,16 @@
 SHELL:=/bin/bash -x
+# https://unix.stackexchange.com/questions/235223/makefile-include-env-file
 
+include .env
+export $(shell sed 's/=.*//' .env)
 
-dryrun: loadenv
-	envsubst < demo-restore-volume.sh | tee demo-restore-volume-amb-valors.sh
+.PHONY: 
 
-dryrun2: loadenv
-	envsubst < demo2-restore-volume.sh | tee demo2-restore-volume-amb-valors-substituits.sh
+dryrun: 
+	env && envsubst < demo-restore-volume.sh | tee demo-restore-volume-amb-valors.sh
+
+dryrun2: 
+	env && envsubst < demo2-restore-volume.sh | tee demo2-restore-volume-amb-valors-substituits.sh
 
 run: 
-	source demo2.restore-volume.sh
-
-loadenv:
-	source demo2.env
+	env && source demo2.restore-volume.sh

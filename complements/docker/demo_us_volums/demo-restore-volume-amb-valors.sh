@@ -3,12 +3,12 @@
 ## procés per etapes
 
 ## 
-NOM_VOLUM="volum-restore"
-NOM_CONTAINER="container-auxiliar"
-DIRECTORI_DE_CONTAINER="unnomqualsevol"
-DIRECTORI_TEMPORAL="tmp"
-FITXER_A_TRASSPASSAR="millor-un-tar.tgz"
-FITXER_A_EMPAQUETAR="un-nom-qualsevol.txt"
+##NOM_VOLUM="volum-restore"
+##NOM_CONTAINER="container-auxiliar"
+##DIRECTORI_DE_CONTAINER="unnomqualsevol"
+##DIRECTORI_TEMPORAL="tmp"
+##FITXER_A_TRASSPASSAR="millor-un-tar.tgz"
+##FITXER_A_EMPAQUETAR="un-nom-qualsevol.txt"
 
 ##source demo2.env
 # idempotent: eliminem abans de crear

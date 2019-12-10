@@ -10,7 +10,7 @@
 
 
 # incorporem les variables d'entorn d'un fitxer: haurien de ser les que apareixen a dalt comentades
-source demo2.env
+##source demo2.env
 
 # idempotent: eliminem abans de crear
 docker container rm $NOM_CONTAINER
