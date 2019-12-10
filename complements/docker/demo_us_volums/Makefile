@@ -12,5 +12,8 @@ dryrun:
 dryrun2: 
 	env && envsubst < demo2-restore-volume.sh | tee demo2-restore-volume-amb-valors-substituits.sh
 
-run: 
+runrestore: 
 	env && source demo2-restore-volume.sh
+
+runbackup:
+	env && source demo-backup-final.sh

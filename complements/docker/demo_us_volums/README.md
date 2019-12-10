@@ -1,6 +1,8 @@
 # Ús de Volums a docker 
 
-## objectiu: proporcionar "estat" als containers: cal conservar les dades!!
+## objectiu: 
+### proporcionar "estat" als containers: cal conservar les dades!!
+Per fer proves emmagatzemarem fitxers a un volum de manera directa: enviant i recuperant fitxers al/del volum.
 
 La següent llista d'scripts ens permeten agafar soltura en l'ús dels volums
 
