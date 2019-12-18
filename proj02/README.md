@@ -23,9 +23,9 @@ Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmy
 ## Enllaços interessants
 
 ###  hosting
-- [comparativa hosting](https://www.comparahosting.com/p/que-es-hosting/) 
-- [hosting gestionat](https://www.claranet.es/hosting-gestionado) 
-- [managed hosting](https://www.liquidweb.com/managed-hosting/) 
-
+- [MUSTREAD! - hostinger: hosting](https://www.hostinger.es/tutoriales/que-es-un-hosting)
+- [comparahosting: comparativa hosting](https://www.comparahosting.com/p/que-es-hosting/) 
+- [claranet: hosting gestionat](https://www.claranet.es/hosting-gestionado) 
+- [liquidweb: managed hosting](https://www.liquidweb.com/managed-hosting/) 
 ###  interessant
-- [consells per aventurar-se en el món de l'allotjament web](https://www.proxadmin.es/blog/empezando-un-negocio-de-hosting/#more-15)
+- [proxadmin: consells per aventurar-se en el món de l'allotjament web](https://www.proxadmin.es/blog/empezando-un-negocio-de-hosting/#more-15)

@@ -12,8 +12,22 @@ dryrun:
 dryrun2: 
 	env && envsubst < demo2-restore-volume.sh | tee demo2-restore-volume-amb-valors-substituits.sh
 
+dryrun3: 
+	env && envsubst < demo-volum-ftp.sh | tee demo-volum-ftp-sense-variables.sh
+
 runrestore: 
 	env && source demo2-restore-volume.sh
 
 runbackup:
 	env && source demo-backup-final.sh
+
+runftp:
+	env && source demo-volum-ftp.sh
+runftp2:
+	env && source tmp-demo-volum-ftp.sh
+runstack:
+	docker network create --driver overlay frontend
+	docker stack deploy  --compose-file docker-compose-proj02.yml stack001
+delstack:
+	docker stack rm stack001
+	docker network rm frontend

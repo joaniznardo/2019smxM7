@@ -3,6 +3,8 @@
 ## objectiu: 
 ### proporcionar "estat" als containers: cal conservar les dades!!
 Per fer proves emmagatzemarem fitxers a un volum de manera directa: enviant i recuperant fitxers al/del volum.
+La millor manera de conservar/recuperar dades des d'un container és: [volums](https://docs.docker.com/storage/volumes/).
+
 
 La següent llista d'scripts ens permeten agafar soltura en l'ús dels volums
 
@@ -16,4 +18,6 @@ La següent llista d'scripts ens permeten agafar soltura en l'ús dels volums
 - [demo-restore-volume-amb-valors.sh](./demo-restore-volume-amb-valors.sh)
 - [demo-restore-volume.sh](./demo-restore-volume.sh)
 - [.env](./.env)
+Fitxer que conté les variables d'entorn i els valors associats per als containers i els volums. Ens permet fer múltiples execucions, amb tan sols canviar els valors assignats a les variables. 
 - [Makefile](./Makefile)
+Fitxer que conté les intruccions per executar els diferents scripts. Cada bloc comença amb una paraula seguida de dos punts: és una secció. Per invocar una secció cal invocarla amb l'ordre **"make <nom_seccio>"** .
