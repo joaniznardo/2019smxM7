@@ -1,0 +1,83 @@
+version: "3.7"
+services:
+
+  ftpserver:
+    #image: vsftpdjoan:v0.1
+    image: fauria/vsftpd
+    ports:
+      - "21:21"
+      - "20:20"
+      - "21100-21110:21100-21110"
+    networks:
+      - frontend2
+    env_file:
+      - ./.env
+    volumes:
+      - type: volume
+        source: volum_dades_client
+        target: /home/vsftpd/admin
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  firefoxtest:
+    image: playniuniu/docker-gui-firefox
+    #    ports:
+    #      - "80:80"
+    networks:
+      - frontend2
+    env_file:
+      - ./.env
+    environment:
+      - DISPLAY=    
+    volumes:
+      - type: bind
+        source: /tmp/.X11-unix
+        target: /tmp/.X11-unix
+    extra_hosts:    
+      - "www.cvjoan.org:192.168.3.124"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  nginx:
+    image: nginx:1.13
+    ports:
+      - "80:80"
+    networks:
+      - frontend2
+    env_file:
+      - ./.env
+    volumes:
+      - type: volume
+        source: volum_dades_client
+        target: /usr/share/nginx/html
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+
+networks:
+  frontend2:
+    external:
+      true
+  backend:
+    external:
+      false
+
+volumes:
+  volum_dades_client:

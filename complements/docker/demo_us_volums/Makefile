@@ -31,3 +31,11 @@ runstack:
 delstack:
 	docker stack rm stack001
 	docker network rm frontend
+runstack2:
+	xhost + local:docker
+	docker network create --driver overlay frontend2
+	docker stack deploy  --compose-file docker-compose-proj02b.yml stack002
+delstack2:
+	docker stack rm stack002
+	docker network rm frontend2
+	xhost - local:docker
