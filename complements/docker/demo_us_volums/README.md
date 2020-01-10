@@ -21,3 +21,5 @@ La següent llista d'scripts ens permeten agafar soltura en l'ús dels volums
 Fitxer que conté les variables d'entorn i els valors associats per als containers i els volums. Ens permet fer múltiples execucions, amb tan sols canviar els valors assignats a les variables. 
 - [Makefile](./Makefile)
 Fitxer que conté les intruccions per executar els diferents scripts. Cada bloc comença amb una paraula seguida de dos punts: és una secció. Per invocar una secció cal invocarla amb l'ordre **"make <nom_seccio>"** .
+
+- [demo de l'ús de traefik](https://github.com/boxboat/traefik-tls) Fer un git clone i seguir els passes del README. :)
