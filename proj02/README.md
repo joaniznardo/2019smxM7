@@ -1,5 +1,7 @@
 # Hosting & co
 
+## Data de presentació: dimecres 29/01/2020
+
 Sou una empresa que proporciona serveis de hosting per a múltiples empreses clients. 
 
 Teniu ja tres clients (empreses) que han contractat els vostres serveis.
@@ -29,3 +31,11 @@ Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmy
 - [liquidweb: managed hosting](https://www.liquidweb.com/managed-hosting/) 
 ###  interessant
 - [proxadmin: consells per aventurar-se en el món de l'allotjament web](https://www.proxadmin.es/blog/empezando-un-negocio-de-hosting/#more-15)
+
+### certificats
+- [generador de certificats online](https://zerossl.com/)
+- [crear certificats de desenvolupament](https://lukas.zapletalovi.com/2019/09/testing-tls-ca-server-and-client-certs.html) Un dels meus referents favorits
+
+### traefik
+- [tutorial alternatiu traefik 2.0](https://containo.us/blog/traefik-2-0-docker-101-fc2893944b9d/)
+- [codi de l'enllaç anterior](https://github.com/containous/blog-posts)
