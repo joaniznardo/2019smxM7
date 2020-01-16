@@ -12,8 +12,7 @@ Creareu una web de tipus blog on se vaja contant el “make off” de la creaci�
 
 En la vostra empresa haurà d’apareixer els vostres currículums en format web (i opcionalment descarregable com a pdf). 
 
-En l’ampliació se li proporcionarà com a prestació addicional un panell de control (cockpit/webmin/ajenti) per fer accessible l’administració de la web de manera gràfica. 
-
+NO ENTRA!!! >> En l’ampliació se li proporcionarà com a prestació addicional un panell de control (cockpit/webmin/ajenti) per fer accessible l’administració de la web de manera gràfica. <<
 La qualitat del vostre servei se determina al 50% per la velocitat en la que sou capaços de lliurar l’accés a l’espai web (usuari+contrassenya+ip) i les prestacions que otorgueu. 
 
 Volem que tant l’empresa client com nosaltres ser capaços de determinar quins són els accessos que s’efectuen als seus servidors. 
