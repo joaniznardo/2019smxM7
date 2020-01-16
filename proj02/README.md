@@ -33,9 +33,12 @@ Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmy
 - [proxadmin: consells per aventurar-se en el món de l'allotjament web](https://www.proxadmin.es/blog/empezando-un-negocio-de-hosting/#more-15)
 
 ### certificats
+- [Certificats i Autoritats de certificació](https://letsencrypt.org/es/getting-started/)
 - [generador de certificats online](https://zerossl.com/)
 - [crear certificats de desenvolupament](https://lukas.zapletalovi.com/2019/09/testing-tls-ca-server-and-client-certs.html) Un dels meus referents favorits
-
+- [diapos demo letsencrypt](https://drive.google.com/file/d/1fb2rGGGEoh47QpQnhqJYN03OU-9nzWu3/view?usp=sharing) Demo de generació de certificat de Letsencrypt via zerossl.com
+- [video demo letsencript - part 1](https://drive.google.com/file/d/1dWedbUqIs_n5F40v6ZPAKn-2kBrzxlo9/view?usp=sharing) Video (no audio); millor diapos (captures) ;)
+- [video demo letsencript - part 2](https://drive.google.com/file/d/1qjTRBN_sdemaC4WGFjkGlSR-IwxsAXOq/view?usp=sharing) Part final.
 ### traefik
 - [tutorial alternatiu traefik 2.0](https://containo.us/blog/traefik-2-0-docker-101-fc2893944b9d/)
 - [codi de l'enllaç anterior](https://github.com/containous/blog-posts)
