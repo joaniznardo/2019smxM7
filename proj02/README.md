@@ -12,7 +12,7 @@ Creareu una web de tipus blog on se vaja contant el “make off” de la creaci�
 
 En la vostra empresa haurà d’apareixer els vostres currículums en format web (i opcionalment descarregable com a pdf). 
 
-NO ENTRA!!! >> En l’ampliació se li proporcionarà com a prestació addicional un panell de control (cockpit/webmin/ajenti) per fer accessible l’administració de la web de manera gràfica. <<
+**NO ENTRA!!! >> En l’ampliació se li proporcionarà com a prestació addicional un panell de control (cockpit/webmin/ajenti) per fer accessible l’administració de la web de manera gràfica. <<**
 La qualitat del vostre servei se determina al 50% per la velocitat en la que sou capaços de lliurar l’accés a l’espai web (usuari+contrassenya+ip) i les prestacions que otorgueu. 
 
 Volem que tant l’empresa client com nosaltres ser capaços de determinar quins són els accessos que s’efectuen als seus servidors. 
@@ -20,6 +20,14 @@ Volem que tant l’empresa client com nosaltres ser capaços de determinar quins
 Volem estar en condicions de resoldre incidències que se generen en el servidor. 
 
 Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmyadmin.
+
+**VALIDACIONS**
+- crear un nou compte per al servei d'ftp (sftp) per poder fer accessible una nova web
+- publicar (proporcionada per mi) una nova web amb el nou compte. (**NOTA** la nova web serà accessible també a través del proxy *traefik*)
+- generar un nou certificat per a la nova web. 
+- fer modificacions a una de les webs existents (nova entrada a un blog/ nou producte a  una botiga/ canvi de les dades de contacte...)
+- comprovar des de quines ip s'ha accedit a les webs.
+- existeixen els certificats per a dues de les quatre webs obligatòries
 
 ## Enllaços interessants
 
