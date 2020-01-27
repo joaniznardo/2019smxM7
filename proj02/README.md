@@ -46,6 +46,7 @@ Volem ser capaços de fer funcionar un gestor de bases de dades com ara el phpmy
 - [diapos demo letsencrypt](https://drive.google.com/file/d/1fb2rGGGEoh47QpQnhqJYN03OU-9nzWu3/view?usp=sharing) Demo de generació de certificat de Letsencrypt via zerossl.com
 - [video demo letsencript - part 1](https://drive.google.com/file/d/1dWedbUqIs_n5F40v6ZPAKn-2kBrzxlo9/view?usp=sharing) Video (no audio); millor diapos (captures) ;)
 - [video demo letsencript - part 2](https://drive.google.com/file/d/1qjTRBN_sdemaC4WGFjkGlSR-IwxsAXOq/view?usp=sharing) Part final.
+- [el millor generador de certificats automàtic](https://github.com/Neilpang/acme.sh) 
 ### traefik
 - [tutorial alternatiu traefik 2.0](https://containo.us/blog/traefik-2-0-docker-101-fc2893944b9d/)
 - [codi de l'enllaç anterior](https://github.com/containous/blog-posts)
