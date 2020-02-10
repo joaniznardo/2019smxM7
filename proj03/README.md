@@ -8,6 +8,6 @@
 
 ## validació
 
-- administració del servidor per la interficie gràfica i per a RESTFUL API
+- administració del servidor per la interficie gràfica i per a REST API mitjançant l'ordre **curl**
 - configuració i administració d'un nou domini proporcionat el dia de la validació
 
