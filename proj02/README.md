@@ -1,6 +1,7 @@
 # Hosting & co
 
 ## Data de presentació: dimecres 29/01/2020
+- [formulari previ a la presentació](https://forms.gle/fZc38ENQhsz7bU3x5)
 
 Sou una empresa que proporciona serveis de hosting per a múltiples empreses clients. 
 
