@@ -11,3 +11,5 @@
 - administració del servidor per la interficie gràfica i per a RESTFUL API
 - configuració i administració d'un nou domini proporcionat el dia de la validació
 
+# mini-demo
+[captures-de-pantalla](./mail-files.zip)
