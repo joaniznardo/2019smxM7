@@ -15,11 +15,13 @@
 [captures-de-pantalla](./mail-files.zip)
 
 # punt de partida
-- docker volume create volum_mail_server
-- docker run \\
-    --net=host \\
-    -v /etc/localtime:/etc/localtime:ro \\
-    -v volum_mail_server:/data \\
-    --name "mailserver" \\
-    -h "si_no_canvies_aquest_domini_suspens_el_projecte.tk" \\
+```
+docker volume create volum_mail_server
+docker run \
+    --net=host \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v volum_mail_server:/data \
+    --name "mailserver" \
+    -h "si_no_canvies_aquest_domini_suspens_el_projecte.tk" \
     -t analogic/poste.io
+```
