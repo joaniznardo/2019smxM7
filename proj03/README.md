@@ -25,3 +25,6 @@ docker run \
     -h "si_no_canvies_aquest_domini_suspens_el_projecte.tk" \
     -t analogic/poste.io
 ```
+
+# demo REST API
+[demo](./20200214-demo-rest-api-poste.io.txt) Resum de la classe del divendres 20200214
