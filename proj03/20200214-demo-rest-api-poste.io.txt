@@ -1,0 +1,67 @@
+# demo - live
+# 
+
+# - de la documentació de la pròpia web
+# ------------
+#>>>>> Live REST API demo with sandbox
+#>>>>> https://admin@poste.io:admin@demo.poste.io/admin/api/doc
+
+#>>>>> Username: admin@poste.io
+#>>>>> Password: admin
+# ------------
+
+# - com volem que actue l'ordre curl
+# - 
+# - (-v) amb tot detall
+# - (-k) acceptant un certificat autosignat
+# - (-s) sense cap altra sortia més que les dades retornades
+
+export CURL_OPTIONS="-v -k "
+export CURL_OPTIONS="-s "
+# ...me quedaré amb la darrera, però és útil fer servir la primera per resoldre problemes de connexió o quan el certificat per part del servidor és autosignat.
+
+export CURL_AUTH="-u admin@poste.io:admin "
+
+# consulta dominis (hauria de produir el mateix resultat)
+curl -v -k -u admin@poste.io:admin https://demo.poste.io/admin/api/v1/domains
+curl $CURL_OPTIONS -u admin@poste.io:admin https://demo.poste.io/admin/api/v1/domains
+curl $CURL_OPTIONS $CURL_AUTH https://demo.poste.io/admin/api/v1/domains
+
+
+# consulta amb filtrat (jq power!!)
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.'
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.results[]'
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.results[0]'
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.results[1]'
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.results[-1]'
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq '.results[].name' | grep poste
+curl $CURL_OPTIONS $CURL_AUTH  https://demo.poste.io/admin/api/v1/domains | jq -r '.results[].name' | grep poste
+
+
+# consulta compte netsor
+curl $CURL_OPTIONS $CURL_AUTH https://demo.poste.io/admin/api/v1/boxes | jq -r '.results[].address'
+curl $CURL_OPTIONS $CURL_AUTH https://demo.poste.io/admin/api/v1/boxes | jq -r '.results[].address' | grep nestor
+
+
+# creació compte nestor
+curl $CURL_OPTIONS $CURL_AUTH -d "name=nestor&email=nestor.lmgtfy@poste.io&passwordPlaintext=perillinminent" https://demo.poste.io/admin/api/v1/boxes
+
+export CURL_DATA="-d name=nestor&email=nestor.lmgtfy@poste.io&passwordPlaintext=perillinminent"
+curl $CURL_OPTIONS $CURL_AUTH $CURL_DATA https://demo.poste.io/admin/api/v1/boxes
+
+# validem si s'ha creat el compte netsor
+curl $CURL_OPTIONS $CURL_AUTH https://demo.poste.io/admin/api/v1/boxes | jq -r '.results[].address' | grep nestor
+
+
+# GET/POST - sense dades / amb dades
+export CURL_ACTION=""
+# DELETE - sense dades
+export CURL_ACTION="-X DELETE"
+# UPDATE > PATCH - amb dades
+export CURL_ACTION="-X PATCH"
+
+# ...que me queda???
+# deixem el servidor com estava ;)
+export CURL_ACTION="-X DELETE"
+curl $CURL_OPTIONS $CURL_AUTH $CURL_ACTION https://demo.poste.io/admin/api/v1/boxes/nestor.lmgtfy@poste.io
+
