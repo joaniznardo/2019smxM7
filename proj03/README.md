@@ -1,5 +1,7 @@
 # Projecte 3 - servidor de correu
 
+## [formulari final](https://forms.gle/mspx3FfyRC2sKEVC9)
+
 ## objectiu
 - a partir del servidor de correu [poste](https://poste.io/) configurar el servidor i comptes de correu per al donimi que has creat en el projecte anterior de manera que se puga enviar missatges (emails) entre comptes de dos dominis.
 
