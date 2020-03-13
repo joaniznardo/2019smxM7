@@ -1,0 +1,94 @@
+version: '3.7'
+#version: '3.7'
+#version: '2.2'
+
+networks:
+  frontend:
+    external:
+      true
+  backend:
+    external:
+      false
+
+volumes:
+  volummysql:
+    name: ${LOCALPATH}
+#     external: true
+#       name: ${LOCALPATH}
+services:
+  powerdns:
+    image: pschiffe/pdns-mysql:alpine
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+#      - "${IPHOST}:53:53/udp"
+      - "8081:8081"
+    environment:
+      PDNS_api_key: "${PDNS_API_KEY}"
+      #PDNS_api_key: "secret"
+      PDNS_master: "yes"
+      PDNS_api: "yes"
+      PDNS_webserver: "yes"
+      PDNS_webserver_address: "0.0.0.0"
+      #PDNS_webserver_address: "192.168.23.100"
+      PDNS_webserver_allow_from: "0.0.0.0/0"
+      PDNS_webserver_password: "secret"
+      PDNS_version_string: "4.1.1"
+      PDNS_default_ttl: "1500"
+      PDNS_soa_minimum_ttl: "1200"
+      PDNS_default_soa_name: "ns1.${DOMAIN}"
+      PDNS_default_soa_mail: "hostmaster.${DOMAIN}"
+      MYSQL_ENV_MYSQL_HOST: "mysql"
+      MYSQL_ENV_MYSQL_PASSWORD: "${DB_USER_PASSWORD}"
+      MYSQL_ENV_MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_ENV_MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_ENV_MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+    depends_on:
+      - mysql
+
+  powerdns-admin:
+    image: aescanero/powerdns-admin
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "9191:9191"
+    environment:
+      PDNS_PROTO: "http"
+      PDNS_API_KEY: "${PDNS_API_KEY}"
+      #PDNS_HOST: "192.168.23.100"
+      PDNS_HOST: "powerdns"
+      PDNS_PORT: "8081"
+      PDNSADMIN_SECRET_KEY: "secret"
+      PDNSADMIN_SQLA_DB_HOST: "mysql"
+      PDNSADMIN_SQLA_DB_PASSWORD: "${DB_USER_PASSWORD}"
+      PDNSADMIN_SQLA_DB_NAME: "${DB_NAME}"
+      PDNSADMIN_SQLA_DB_USER: "${DB_USERNAME}"
+    depends_on:
+      - powerdns
+      - mysql
+
+  mysql:
+    image: yobasystems/alpine-mariadb
+    networks:
+            #      - frontend
+      - backend
+    environment:
+      MYSQL_PASSWORD: "${DB_USER_PASSWORD}"
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      #    volumes:
+      #    - ${LOCALPATH}:/var/lib/mysql
+      #volumes:
+      #- type: volume
+      #  source: volummysql
+      #  target: /var/lib/mysql
+      #  name: ${LOCALPATH}
+    volumes:
+        - volummysql:/var/lib/mysql
+    ports:
+      - "3306:3306"

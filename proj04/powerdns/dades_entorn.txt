@@ -1,0 +1,9 @@
+export PDNS_API_KEY=random
+export DOMAIN=iznardo.edu
+export DB_ROOT_PASSWORD=password
+export DB_USERNAME=powerdns
+export LOCALPATH=volum_powerdns
+export DB_NAME=powerdns
+export IPHOST=192.168.0.12
+export DB_USER_PASSWORD=password
+
